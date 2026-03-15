@@ -62,7 +62,7 @@ QString shortcut_text(const Spec& spec) {
 MainWindow::MainWindow(QWidget* parent) : QWidget(parent) {
   build_ui();
   refresh_display();
-  setWindowTitle("calc");
+  setWindowTitle("Basic Calc");
   setFixedSize(392, 660);
 }
 

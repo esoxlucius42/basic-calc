@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Basic Calc
+Comment=Basic desktop calculator
+Exec=@CMAKE_BINARY_DIR@/basic-calc
+TryExec=@CMAKE_BINARY_DIR@/basic-calc
+Path=@CMAKE_BINARY_DIR@
+Icon=@CMAKE_SOURCE_DIR@/art/sqrt-icon.png
+Terminal=false
+Categories=Utility;Calculator;Qt;
+StartupNotify=true
+StartupWMClass=basic-calc
+X-GNOME-WMClass=basic-calc

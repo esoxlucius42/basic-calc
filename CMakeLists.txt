@@ -24,20 +24,27 @@ add_library(calculator_engine
 target_include_directories(calculator_engine PUBLIC src)
 
 if(QT_PACKAGE)
-  add_executable(calc
+  configure_file(
+    ${CMAKE_SOURCE_DIR}/basic-calc.desktop.in
+    ${CMAKE_BINARY_DIR}/basic-calc.desktop
+    @ONLY
+  )
+
+  add_executable(basic_calc
     src/main.cpp
     src/mainwindow.cpp
     src/mainwindow.h
     src/resources.qrc
   )
 
-  set_target_properties(calc PROPERTIES
+  set_target_properties(basic_calc PROPERTIES
+    OUTPUT_NAME basic-calc
     AUTOMOC ON
     AUTORCC ON
     AUTOUIC ON
   )
 
-  target_link_libraries(calc PRIVATE calculator_engine ${QT_PACKAGE}::Widgets)
+  target_link_libraries(basic_calc PRIVATE calculator_engine ${QT_PACKAGE}::Widgets)
 else()
   message(WARNING "Qt Widgets development files were not found. GUI sources are present, but only engine tests will be built in this environment.")
 endif()
