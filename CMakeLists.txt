@@ -28,6 +28,7 @@ if(QT_PACKAGE)
     src/main.cpp
     src/mainwindow.cpp
     src/mainwindow.h
+    src/resources.qrc
   )
 
   set_target_properties(calc PROPERTIES

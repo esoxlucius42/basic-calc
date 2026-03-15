@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="icons/sqrt-icon.png">../art/sqrt-icon.png</file>
+  </qresource>
+</RCC>
